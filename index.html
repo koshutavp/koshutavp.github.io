@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наші Додатки & Ігри | Android Apps</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #22c55e;
+            --accent-hover: #16a34a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .share-bar {
+            text-align: center;
+            margin: 20px 0 40px;
+        }
+
+        .btn-share {
+            background-color: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-color);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-share:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: var(--text-color);
+        }
+
+        .apps-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .banner-container {
+            width: 100%;
+            aspect-ratio: 1024 / 500; /* Зберігає пропорцію графічного банера 1024x500 */
+            background-color: #334155;
+            overflow: hidden;
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .app-title {
+            font-size: 1.6rem;
+        }
+
+        .app-description {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .btn-playstore {
+            display: inline-block;
+            align-self: flex-start;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-playstore:hover {
+            background-color: var(--accent-hover);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Ласкаво просимо!</h1>
+            <p>Пропонуємо огляд додатків, які створено нами та доступні для завантаження. </p>
+        </header>
+
+        <div class="share-bar">
+            <button class="btn-share" onclick="shareSite()">🔗 Поділитися сторінкою</button>
+        </div>
+
+        <main class="apps-grid">
+
+            <!-- КАРТКА 1: ЛАУНЧЕР -->
+            <article class="app-card">
+                <div class="banner-container">
+                    <!-- Замініть banner_launcher.jpg на назву файлу вашого банера -->
+                    <img src="banner_launcher_en.jpg" alt="Банер Лаунчер">
+                </div>
+                <div class="app-content">
+                    <h2 class="app-title">Лаунчер для літніх людей</h2>
+                    <p class="app-description">
+                        Interface for the Elderly - KVP Launcher — це спрощена, надійна та інтуїтивно зрозуміла оболонка для Android, яка перетворює будь-який сучасний пристрій на зручний бабкофон. Додаток створено спеціально для користувачів похилого віку, людей із порушенням зору та всіх, кому важко орієнтуватися у стандартних заплутаних інтерфейсах смартфонів.
+                    </p>
+                    <!-- Вставте ваше посилання на Play Market -->
+                    <a href="https://play.google.com/store/apps/details?id=com.koshuta.interfacefortheelderly">
+                        Завантажити в Google Play
+                    </a>
+                </div>
+            </article>
+
+            <!-- КАРТКА 2: ГРА -->
+            <article class="app-card">
+                <div class="banner-container">
+                    <!-- Замініть banner_game.jpg на назву файлу вашого банера -->
+                    <img src="banner_en.jpg" alt="Банер Гри">
+                </div>
+                <div class="app-content">
+                    <h2 class="app-title">Правда чи Фейк: Гра Вікторина</h2>
+                    <p class="app-description">
+                        Ви готові дізнатися, що насправді правда, а що — вправний фейк?
+
+Ласкаво просимо у True or Fake — захопливу інтелектуальну вікторину українською мовою, яка перевірить вашу ерудицію, логічне мислення та загальні знання. Це не просто звичайна гра з питаннями, а справжній виклик для вашого мозку, де кожен факт стає відкриттям!
+                    </p>
+                    <!-- Вставте ваше посилання на Play Market -->
+                    <a href="https://play.google.com/store/apps/details?id=com.koshuta.trueorfake">
+                        Завантажити в Google Play
+                    </a>
+                </div>
+            </article>
+
+        </main>
+
+        <footer>
+            <p>© 2026 Всі права захищено</p>
+        </footer>
+    </div>
+
+    <script>
+        function shareSite() {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert("Посилання скопійовано в буфер обміну!");
+            }
+        }
+    </script>
+</body>
+</html>
